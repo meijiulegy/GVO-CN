@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>距离校准</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <H1>使用卡片进行校准</H1>
+    
+    <H3>说明：</H3>
+    <ul>
+        <li>您可以在继续之前休息一下。</li>
+        <li>请回到一个舒适的坐姿。</li>
+        <li>按“-”或“+”按钮调整下方卡片的大小，使其与标准身份证/银行卡的大小匹配。</li>
+        <li>调整头部与屏幕间的距离，使眼睛与屏幕距离<strong>30厘米</strong>（A4纸的长边长度），并在接下来的测试中保持头部稳定。</li>
+        <li>在接下来的视野测试后，您将被要求根据难易程度为此距离校准方法评分。</li>
+        <li id = 'chosenEye'>准备好后，遮盖不被测试的眼睛，<strong>勾选“我已准备好”，然后按下空格键</strong>开始视野测试。</li>
+    </ul>
+
+    <div class = "cardResizer">
+        <div class = "card">
+            <img class = "cardImg" id='bankCard' src = "card.jpg">
+        </div>
+        <button id = "smaller">-</button>
+        <button id = "bigger">+</button>
+    </div><br>
+    <p id="errorMsg" style="color: red;"></p>
+
+    <input type="checkbox" id="ready">
+    <label for="ready">我已准备好</label>
+    <button id="startGVO">start test</button>
+    
+    <script src="calibration.js"></script>
+</body>
+</html>

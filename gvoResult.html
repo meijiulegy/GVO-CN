@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结果</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <H1>视野测试结果</H1>
+    <div id="resultDiagram" class="square"></div><Br>
+
+    <div id="userScoreContainer">
+        <h2>选择一个评分</h2>
+        <p id="reminder">请根据难易程度为之前的距离校准方法评分：</p>
+        <p>如果需要，您稍后将有机会修改此评分。</p>
+        <p>(1 = 困难/不便)</p>
+        <p>(10 = 易于实施)</p>
+        <input type="radio" name="userScore" id="score1" value="1">
+        <label for="score1">1</label>
+        <input type="radio" name="userScore" id="score2" value="2">
+        <label for="score2">2</label>
+        <input type="radio" name="userScore" id="score3" value="3">
+        <label for="score3">3</label>
+        <input type="radio" name="userScore" id="score4" value="4">
+        <label for="score4">4</label>
+        <input type="radio" name="userScore" id="score5" value="5">
+        <label for="score5">5</label>
+        <input type="radio" name="userScore" id="score6" value="6">
+        <label for="score6">6</label>
+        <input type="radio" name="userScore" id="score7" value="7">
+        <label for="score7">7</label>
+        <input type="radio" name="userScore" id="score8" value="8">
+        <label for="score8">8</label>
+        <input type="radio" name="userScore" id="score9" value="9">
+        <label for="score9">9</label>
+        <input type="radio" name="userScore" id="score10" value="10">
+        <label for="score10">10</label>
+    </div><br>
+    
+    <div class="nextMethodButtons">
+        <button id="nextButton" disabled>前往下一个方法</button>
+    </div>
+    
+    <script src="gvoResult.js"></script>
+</body>
+</html>

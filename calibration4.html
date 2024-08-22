@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>距离校准</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <H1>通过前后移动头部校准</H1>
+    <H3>说明：</H3>
+    <ul>
+        <li>您可以在继续之前休息一下。</li>
+        <li>请回到一个舒适的坐姿。</li>
+        <li id = 'chosenEye'>用选择的测试眼睛盯住下方的黄色目标，并遮盖另一只眼睛。</li>
+        <li><strong>前后移动头部，直到红点在视野中消失。</strong></li>
+        <li>保持头部稳定，不要移动。</li>
+        <li>在接下来的视野测试后，您将被要求根据难易程度为此距离校准方法评分。</li>
+        <li>准备好后，<strong>勾选“我已准备好”，然后按下空格键</strong>以开始视野测试。</li>
+    </ul><br>
+
+    <div class="blindSpotCalibrationField">
+        <div class = "circle" id="fixationPoint"></div>
+        <div class = "circle" id="blindSpotLocator1"></div>
+        <div class = "circle" id="blindSpotLocation"></div>
+    </div>
+    <br>
+
+    <div id="buttonsContainer">
+        <input type="checkbox" id="ready">
+        <label for="ready">我已准备好</label><br>
+        <button id="blindSpotCalibrationStartGVO">start test</button>
+    </div>
+    
+    
+    <script src="calibration.js"></script>
+</body>
+</html>

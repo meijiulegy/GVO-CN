@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>距离校准</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <H1>用一个移动红点校准</H1>
+    <H3>说明：</H3>
+
+    <ul>
+        <li>您可以在继续之前休息一下。</li>
+        <li>请回到一个舒适的坐姿。</li>
+        <li id = 'chosenEye1'>用测试眼盯住下方的黄色目标，并遮盖另一只眼睛。</li>
+        <li>点击“开始校准”按钮后，一个红点将出现并开始朝远离黄色目标方向移动。</li>
+        <li id = 'chosenEye2'>保持测试眼盯住中间黄色目标，<strong>在红点消失时鼠标点击按钮。</strong></li>
+        <li>在保持头部稳定的情况下，点击“重复校准”按钮，重复此过程<strong>三次</strong>。</li>
+        <li>您可能会被要求在调整眼睛与幕距离后重复这三次测量</li>
+        <li>距离校准结束后, 保持头部稳定不动，<strong>勾选“我已准备好”，然后按下空格键</strong>以开始视野测试。在接下来的视野测试后，您将被要求根据难易程度为此距离校准方法评分。</li>
+    </ul><br>
+
+    <div class="blindSpotCalibrationField">
+        <div class = "circle" id="fixationPoint"></div>
+        <div class = "circle" id="blindSpotLocator1"></div>
+        <div class = "circle" id="blindSpotLocator2"></div>
+        <div class = "circle" id="blindSpotLocator3"></div>
+        <div class = "circle" id="blindSpotLocation"></div>
+        <audio id="beep" src="beep.mp3"></audio>
+    </div>
+
+    <div id="buttonsContainer" class="buttonsContainer">
+        <button id="startBlindSpotCalibration">开始校准</button>
+        <button id="repeatCalibration2">重复校准</button>
+        <button id="repeatCalibration3">重复校准</button>
+        <button id="now1">红点消失了</button>
+        <button id="now2">红点消失了</button>
+        <button id="now3">红点消失了</button>
+        <button id="redoBlindSpotCalibration">重新校准</button>
+
+        <input type="checkbox" id="ready">
+        <label for="ready" id="readyLabel">我已准备好</label>
+        <button id="blindSpotCalibrationStartGVO">start test</button>
+    </div>
+
+    <div id="msgContainer">
+        <p id="repeatInfo"></p>
+        <p id="errorBS1" style="color: red;"></p>
+        <p id="errorBS2" style="color: red;"></p>
+    </div>
+    
+    <script src="calibration.js"></script>
+</body>
+</html>

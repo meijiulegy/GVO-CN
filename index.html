@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线视野测试主页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <H1>在线视野测试</H1>
+
+
+    <form id="questionnaireContainer">
+        <p>欢迎使用在线视野测试工具。</p>
+        <p>此工具仅用于研究和教学目的。</p>
+        <p>这项研究的目的是找出哪种距离校准方法在在线视野测试中在准确性和易用性方面更为优越。</p>
+        <p>这不是一次医学检查。本工具不应用于疾病的诊断、治疗或预防。</p>
+        <p>请先填写以下问卷。</p>
+        <p></p><br>
+
+        <H3>问卷</H3>
+        <p>为了获取有效的分析数据，存在视野缺损高风险的眼睛将被排除在外。</p>
+        <p>在进行测试之前，请回答以下问题。</p>
+
+        <p>1. 您目前是否正在接受眼科医生的治疗？</p>
+        <input type="radio" name="question1" id="choice1-1" value="1">
+        <label for="choice1-1">是</label>
+        <input type="radio" name="question1" id="choice1-2" value="0">
+        <label for="choice1-2">否</label>
+
+        <p>2. 您的一级亲属（父母、兄弟姐妹或子女）是否患有青光眼，或者您是否曾被测量出眼压升高？</p>
+        <input type="radio" name="question2" id="choice2-1" value="1">
+        <label for="choice2-1">是</label>
+        <input type="radio" name="question2" id="choice2-2" value="0">
+        <label for="choice2-2">否</label>
+
+        <p>3. 您目前是否正在接受神经科医生的治疗？</p>
+        <input type="radio" name="question3" id="choice3-1" value="1">
+        <label for="choice3-1">是</label>
+        <input type="radio" name="question3" id="choice3-2" value="0">
+        <label for="choice3-2">否</label><br><br>
+<!--
+        1. Are you currently under the care of an ophthalmologist?
+        2. Have you been in contact with an ophthalmologist before?
+        3. Do you have a first-degree relative with the eye disease glaucoma, or have you ever had an elevated eye pressure measured by an optician?
+        4. Are you currently under the care of a neurologist?
+        5. Have you been in contact with a neurologist before?
+
+        <p>4. Are you currently under the care of a neurologist?</p>
+        <input type="radio" name="question4" id="choice4-1" value="1">
+        <label for="choice4-1">Yes</label>
+        <input type="radio" name="question4" id="choice4-2" value="0">
+        <label for="choice4-2">No</label>
+        
+        <p>5. Have you been in contact with a neurologist before?</p>
+        <input type="radio" name="question5" id="choice5-1" value="1">
+        <label for="choice5-1">Yes</label>
+        <input type="radio" name="question5" id="choice5-2" value="0">
+        <label for="choice5-2">No</label><br><br>
+-->
+        <button disabled type="submit" id="questionnaireSubmit">提交</button>
+
+    </form>
+
+    <div class="exclusionMessage" id="exclusionMessage">
+        <H3>感谢您的参与</H3>
+        <p>为了获取有效的分析数据，具有较高视野缺损风险的眼睛将被排除。</p>
+        <p>根据您提供的回答，您已被排除在研究之外。</p>
+        <p>感谢您的参与。如果您有任何问题，请发送电子邮件至：<a href= "mailto: y.gu@umcg.nl">y.gu@umcg.nl</a></p>
+    </div>
+
+    <div class="exclusionMessage" id="ageExclusionMessage">
+        <H3>感谢您的关注</H3>
+        <p>出于伦理考虑，本研究仅限于18岁以上的志愿者。</p>
+        <p>您不能继续参与本研究。</p>
+        <p>如果您有任何问题，请发送电子邮件至：<a href= "mailto: y.gu@umcg.nl">y.gu@umcg.nl</a></p>
+    </div>
+
+
+
+    <form id="demographicForm">
+        <H3>请告诉我们更多关于您的信息</H3>
+        <p>(这些信息用于统计分析，而不是用于识别特定参与者)</p>
+
+        <p>您的性别: </p>
+        <input type="radio" name="gender" id="gender1" value="male">
+        <label for="gender1">男</label>
+        <input type="radio" name="gender" id="gender2" value="female">
+        <label for="gender2">女</label>
+        <input type="radio" name="gender" id="gender3" value="not shared">
+        <label for="gender3">我不想透露</label><br><br>
+
+        <label for="demo2-1">您的年龄: </label>
+        <input type="number" name="age" id="age" min="0" max="120">
+        <p id="errorAge" style="color: red;"></p>
+
+        <p>您的种族: </p>
+        <input type="radio" name="ethnicity" id="ethnicity1" value="african">
+        <label for="ethnicity1">非洲裔</label>
+        <input type="radio" name="ethnicity" id="ethnicity2" value="arab">
+        <label for="ethnicity2">中东裔</label>
+        <input type="radio" name="ethnicity" id="ethnicity3" value="asian">
+        <label for="ethnicity3">亚裔</label>
+        <input type="radio" name="ethnicity" id="ethnicity4" value="caucasian">
+        <label for="ethnicity4">白人</label>
+        <input type="radio" name="ethnicity" id="ethnicity5" value="other">
+        <label for="ethnicity5">其他</label>
+        <input type="radio" name="ethnicity" id="ethnicity6" value="not shared">
+        <label for="ethnicity6">我不想透露</label><br><br>
+
+        <button disabled type="submit" id="demoSubmit">提交</button>
+
+    </form>
+
+    <form id="instructionContainer">
+        <H3>使用说明:</H3>
+        <p>测试过程中请勿返回到之前的页面。</p>
+        <p>请勿调整窗口大小。</p>
+        <p>每次视野测试持续不到1分钟。您可以在测试之间休息。整个过程在没有休息的情况下应持续10-15分钟。</p>
+        <p>您将首先进行一轮视野测试练习，接着进行四轮距离校准，每轮校准后再进行一轮视野测试。</p>
+        <p>进行距离校准时，您需要准备：一张标准尺寸的身份证/银行卡、一张A4尺寸的纸张/笔记本，以及一根用于测量距离的绳子。</p>
+
+        <p>在视野测试期间：</p>
+        <ul>
+            <li>佩戴您的矫正镜片或阅读眼镜。</li>
+            <li>保持头部稳定，不要移动。</li>
+            <li>遮盖未被测试的眼睛（不要只是“闭上”眼睛，请参见下图），始终用另一只眼睛盯住屏幕中央的黄色目标。</li>
+            <li>每当看到信号（黑点）时，请按下空格键。</li>
+            <div>
+                <img src = "coverEye.png">
+            </div>
+        </ul>
+        <p>每次视野测试后，将显示一个“显示结果”按钮。点击此按钮查看结果并继续到下一步骤。 </p>
+        <p>在后续的测试轮次中，您还将被要求根据难易程度对距离校准方法进行评分。</p><br>
+
+        <p>请在下方选择您希望测试的眼睛。整个过程中将测试相同的眼睛。</p>
+        <p>准备好后, <strong>勾选“我已准备好”，然后按下空格键</strong> 以开始练习轮次。 第一个信号将在短暂的延迟后出现。每当看到信号时，请按下空格键。</p>
+
+        <p>请选择要测试的眼睛：</p>
+        <input type="radio" name="testEye" id="leftEye" value="-1">
+        <label for="leftEye">左眼</label>
+        <input type="radio" name="testEye" id="rightEye" value="1">
+        <label for="rightEye">右眼</label>
+        <br>
+        <br>
+        <input type="checkbox" id="ready" disabled>
+        <label for="ready">我已准备好</label>
+        <button disabled id="practiceRoundButton">To practice round</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <script src="index.js"></script>
+</body>
+</html>
