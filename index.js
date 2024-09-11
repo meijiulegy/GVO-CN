@@ -130,15 +130,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     function registerTestEye(){
         myDataHandle[0][0] = blindSpotX;
         myDataHandle[0][2] = parseInt(testEye);
-        let randomInt = Math.floor(Math.random() * 3) + 1;
+        let randomInt = Math.floor(Math.random() * 2) + 1;
         switch(randomInt) {
             case 1:
-                myDataHandle[1][3] = [1,2,3,4,5];
-                break;
-            case 2:
                 myDataHandle[1][3] = [3,4,1,2,5];
                 break;
-            case 3:
+            case 2:
                 myDataHandle[1][3] = [4,3,2,1,5];
                 break;
           }
