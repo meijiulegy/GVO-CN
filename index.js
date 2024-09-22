@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     function registerTestEye(){
         myDataHandle[0][0] = blindSpotX;
         myDataHandle[0][2] = parseInt(testEye);
-
+/*
         let randomInt = Math.floor(Math.random() * 4) + 1;
         switch(randomInt) {
             case 1:
@@ -146,7 +146,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 myDataHandle[1][3] = [4,3,2,1,5];
                 break;
           }
-
+        */
+        myDataHandle[1][3] = [4,3,2,1,5];
+        
         console.log(myDataHandle);
         console.log(myDataHandle[1][3]);
         localStorage.setItem('myStepCounter', JSON.stringify(myStepCounter));
